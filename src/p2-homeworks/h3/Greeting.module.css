@@ -1,7 +1,24 @@
-.someClass {
-
+button {
+    margin: 0 10px 0 10px;
+    padding: 0 15px 0 15px;
 }
 
 .error {
-    border: 1px solid red;
+    border: 3px solid red;
+}
+
+.ok {
+    border: 3px solid green;
+}
+
+.forError {
+    color: red;
+}
+
+.forOk {
+    color: green;
+}
+
+span {
+    font-family: "Times New Roman";
 }
