@@ -1,0 +1,22 @@
+.affair {
+    display: flex;
+    margin: 0 5px 0 5px;
+}
+
+.name{
+    width: 150px;
+    padding: 0 5px 0 5px;
+    border: 1px solid black;
+}
+
+.priority {
+    width: 70px;
+    padding: 2px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.button {
+    width: 50px;
+
+}
