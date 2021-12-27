@@ -35,12 +35,12 @@ function Affairs(props: AffairsPropsType) {
         <div className={s.container}>
             <div>
                 <div className={s.title}>My ToDoList:</div>
+                <button onClick={setAll}>All</button>
+                <button onClick={setHigh}>High</button>
+                <button onClick={setMiddle}>Middle</button>
+                <button onClick={setLow}>Low</button>
                 <div>{mappedAffairs}</div>
             </div>
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
         </div>
     )
 }
