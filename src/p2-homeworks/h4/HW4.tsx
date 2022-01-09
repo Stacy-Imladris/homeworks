@@ -21,16 +21,13 @@ function HW4() {
 
     return (
         <div>
-            <hr/>
-            homeworks 4
-
             <div className={s.column}>
                 <SuperInputText
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
@@ -72,7 +69,6 @@ function HW4() {
             {/*<AlternativeSuperInputText/>*/}
             {/*<AlternativeSuperButton/>*/}
             {/*<AlternativeSuperCheckbox/>*/}
-            <hr/>
         </div>
     )
 }

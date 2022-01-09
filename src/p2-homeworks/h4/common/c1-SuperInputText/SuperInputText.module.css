@@ -2,11 +2,23 @@
 
 }
 
+input[type=text]:focus {
+    background-color: #4CAF50;
+    width: 220px;
+}
+
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    border: 3px solid #004901;
+    margin: 5px;
+    width: 200px;
+    background: #077517;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
 
 .error {
-    color: red;
+
 }

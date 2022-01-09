@@ -1,7 +1,6 @@
 .main {
     display: flex;
     justify-content: center;
-    background-color: #baea74;
 }
 
 .avatar {
@@ -27,7 +26,7 @@
 .in {
     height: 30px;
     width: 30px;
-    background-color: #baea74;
+    background-color: #d0eca1;
     border-radius: 0 0 0 30px;
 }
 

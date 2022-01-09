@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
+import s from './HW2.module.css'
 
 // types
 export type AffairPriorityType = "high" | "middle" | "low"
@@ -44,7 +45,7 @@ function HW2() {
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
 
     return (
-        <div>
+        <div className={s.main}>
             <Affairs
                 data={filteredAffairs}
                 setFilter={setFilter}
