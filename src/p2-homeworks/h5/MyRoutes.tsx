@@ -8,7 +8,7 @@ import {Route, Routes, Navigate} from 'react-router-dom'
 export enum PATH {
     PRE_JUNIOR = '/pre-junior',
     JUNIOR = '/junior',
-    JUNIOR_PLUS = '/junior-plus'
+    JUNIOR_PLUS = '/junior-plus',
 }
 
 function MyRoutes() {
