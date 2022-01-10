@@ -5,10 +5,10 @@ import JuniorPlus from './pages/JuniorPlus'
 import Error404 from './pages/Error404'
 import {Route, Routes, Navigate} from 'react-router-dom'
 
-export const PATH = {
-    PRE_JUNIOR: '/pre-junior',
-    JUNIOR: '/pre-junior',
-    JUNIOR_PLUS: '/pre-junior'
+export enum PATH {
+    PRE_JUNIOR = '/pre-junior',
+    JUNIOR = '/junior',
+    JUNIOR_PLUS = '/junior-plus'
 }
 
 function MyRoutes() {

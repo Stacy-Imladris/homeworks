@@ -33,7 +33,6 @@ function HW1() {
                 message={messageData_1.message}
                 time={messageData_1.time}
             />
-            {/*<hr/>*/}
             <AlternativeMessage
                 avatar={messageData_2.avatar}
                 name={messageData_2.name}
