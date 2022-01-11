@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import {PATH} from "./MyRoutes";
 
 function Header() {
+    //удалить error
     return (
         <nav className={s.main}>
             <div className={s.links}>
