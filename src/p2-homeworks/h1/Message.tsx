@@ -3,18 +3,25 @@ import {MessageDataPropsType} from "./HW1";
 import s from "./Message.module.css";
 
 const Message = (props: MessageDataPropsType) => {
+    const avatarClassName = `${s.avatar} ${props.messageLeft ? s.avatarLeft : s.avatarRight}`
+    const inClassName = `${s.in} ${props.messageLeft ? s.inLeft : s.inRight}`
+    const textClassName = `${s.text} ${props.messageLeft ? s.textLeft : s.textRight}`
+    const mainClassName = `${s.main} ${props.messageLeft ? s.mainLeft : s.mainRight}`
+
     return (
-        <div className={s.main}>
-            <div className={s.avatar}>
-                <img src={props.avatar}/>
-                <div className={s.angle}>
-                    <div className={s.in}></div>
+        <div>
+            <div className={mainClassName}>
+                <div className={avatarClassName}>
+                    <img src={props.avatar}/>
+                    <div className={s.angle}>
+                        <div className={inClassName}></div>
+                    </div>
                 </div>
-            </div>
-            <div className={s.text}>
-                <div className={s.name}>{props.name}</div>
-                <div className={s.message}>{props.message}</div>
-                <div className={s.time}>{props.time}</div>
+                <div className={textClassName}>
+                    <div className={s.name}>{props.name}</div>
+                    <div className={s.message}>{props.message}</div>
+                    <div className={s.time}>{props.time}</div>
+                </div>
             </div>
         </div>
     )

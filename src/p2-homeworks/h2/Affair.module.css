@@ -10,7 +10,7 @@
     width: 65%;
     padding: 7px;
     border: 1px solid black;
-    background-color: #ce65ca;
+    background: linear-gradient(to right, #efb0ec, #d569d2, #ce4ec9, #d569d2, #efb0ec);
 }
 
 .priority {

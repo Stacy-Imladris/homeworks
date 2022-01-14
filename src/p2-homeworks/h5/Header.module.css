@@ -5,6 +5,8 @@
     transition-duration: 500ms;
     transform: translate(100px, -35px);
     font-family: "Times New Roman";
+    position: sticky;
+    top: 0;
 }
 
 .main:hover {

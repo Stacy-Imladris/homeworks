@@ -1,6 +1,6 @@
 import React from 'react';
 import Message from "./Message";
-import AlternativeMessage from "./AlternativeMessage";
+import s from './HW1.module.css'
 
 const messageData_1 = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
@@ -21,24 +21,29 @@ export type MessageDataPropsType = {
     name: string
     message: string
     time: string
+    messageLeft: boolean
 }
 
 function HW1() {
     return (
         <div>
             <hr/>
-            <Message
-                avatar={messageData_1.avatar}
-                name={messageData_1.name}
-                message={messageData_1.message}
-                time={messageData_1.time}
-            />
-            <AlternativeMessage
-                avatar={messageData_2.avatar}
-                name={messageData_2.name}
-                message={messageData_2.message}
-                time={messageData_2.time}
-            />
+            <div className={s.mainCont}>
+                <Message
+                    avatar={messageData_1.avatar}
+                    name={messageData_1.name}
+                    message={messageData_1.message}
+                    time={messageData_1.time}
+                    messageLeft
+                />
+                <Message
+                    avatar={messageData_2.avatar}
+                    name={messageData_2.name}
+                    message={messageData_2.message}
+                    time={messageData_2.time}
+                    messageLeft={false}
+                />
+            </div>
             <hr/>
         </div>
     )

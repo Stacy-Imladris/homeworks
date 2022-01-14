@@ -40,7 +40,7 @@ function Affairs(props: AffairsPropsType) {
                 <SuperButton onClick={setHigh} className={s.button}>High</SuperButton>
                 <SuperButton onClick={setMiddle} className={s.button}>Middle</SuperButton>
                 <SuperButton onClick={setLow} className={s.button}>Low</SuperButton>
-                <div>{mappedAffairs}</div>
+                <div className={s.all}>{mappedAffairs}</div>
             </div>
         </div>
     )

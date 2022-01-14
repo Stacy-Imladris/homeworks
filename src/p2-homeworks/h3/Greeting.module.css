@@ -1,8 +1,3 @@
-.button {
-    margin: 3px 10px 3px 10px;
-    width: 70px;
-}
-
 div .error {
     border: 3px solid #b71a1a;
 }
@@ -16,4 +11,10 @@ div .ok {
 
 .forOk {
     color: green;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

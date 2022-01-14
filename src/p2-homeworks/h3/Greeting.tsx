@@ -21,7 +21,7 @@ const Greeting: React.FC<GreetingPropsType> = (
     const forError = error === "Name is require!" ? s.forError : s.forOk
 
     return (
-        <div>
+        <div className={s.cont}>
             <SuperInputText
                 value={name}
                 onChange={setNameCallback}
@@ -29,7 +29,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                 spanClassName={forError}
                 className={inputClass}
             />
-            <div className={s.cont}>
+            <div>
                 <SuperButton disabled={button} onClick={addUser} className={s.button}>add</SuperButton>
                 <span>Total number: {totalUsers}</span>
             </div>
