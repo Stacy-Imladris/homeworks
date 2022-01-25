@@ -9,13 +9,13 @@
 .name{
     width: 65%;
     padding: 7px;
-    border: 1px solid black;
+    border: 1px solid #0a490a;
     background: linear-gradient(to right, #efb0ec, #d569d2, #ce4ec9, #d569d2, #efb0ec);
 }
 
 .priority {
     width: 35%;
     padding: 7px;
-    border: 1px solid black;
+    border: 1px solid #0a490a;
     text-align: center;
 }

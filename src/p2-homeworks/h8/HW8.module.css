@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    font-family: "Times New Roman";
+    font-size: 22px;
+    width: 330px;
+}
+
+.name {
+    width: 85%;
+    border: solid 2px #077517;
+    padding: 2px 5px 2px 5px;
+}
+
+.age {
+    width: 15%;
+    border: solid 2px #077517;
+    text-align: center;
+    padding: 2px 5px 2px 5px;
+}
