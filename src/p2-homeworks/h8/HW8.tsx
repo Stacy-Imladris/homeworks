@@ -22,7 +22,7 @@ function HW8() {
     const [people, setPeople] = useState<Array<UserType>>(initialPeople)
 
     const finalPeople = people.map((p: UserType) => (
-        <div key={p._id} className={s.main}>
+        <div key={p._id} className={s.line}>
             <div className={s.name}>{p.name}</div>
             <div className={s.age}>{p.age}</div>
         </div>
@@ -34,7 +34,7 @@ function HW8() {
 
     return (
         <div className={s.container}>
-            <div>
+            <div className={s.list}>
                 {finalPeople}
             </div>
             <div>

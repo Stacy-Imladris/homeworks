@@ -4,7 +4,11 @@
     align-items: center;
 }
 
-.main {
+.list {
+    height: 205px;
+}
+
+.line {
     display: flex;
     font-family: "Times New Roman";
     font-size: 22px;
