@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.input {
+    width: 380px;
+}
+
+.num {
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: "Times New Roman";
+}
