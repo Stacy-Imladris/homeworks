@@ -10,7 +10,7 @@ const messageData_1 = {
 }
 
 const messageData_2 = {
-    avatar: 'http://s020.radikal.ru/i710/1311/b6/1d6e1d8d58d7.jpg',
+    avatar: 'http://pm1.narvii.com/6852/19fba6ebc1b4fb11524b9eede9b0e6609c24dd88v2_00.jpg',
     name: 'IT-Incubator',
     message: 'Good job! :)',
     time: '21:40',
