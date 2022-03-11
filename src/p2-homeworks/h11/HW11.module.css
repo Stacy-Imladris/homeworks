@@ -7,12 +7,12 @@
 }
 
 .input {
-    width: 380px;
+    width: 420px;
 }
 
 .num {
     display: inline-block;
-    width: 35px;
+    width: 45px;
     text-align: center;
     padding-bottom: 10px;
     font-family: "Times New Roman";

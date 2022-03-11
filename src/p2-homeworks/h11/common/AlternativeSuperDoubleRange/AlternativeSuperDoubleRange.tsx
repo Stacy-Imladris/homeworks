@@ -1,26 +1,38 @@
-import React from 'react'
-import s from '../c8-SuperDoubleRange/SuperDoubleRange.module.css'
+import React, {useState} from 'react'
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
-type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
+type AlternativeSuperDoubleRangePropsType = {
+    onChangeRange?: (value: [number, number] | number[]) => void
     value?: [number, number]
-    // min, max, step, disable, ...
 }
 
-export const AlternativeSuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
-    {
-        onChangeRange, value,
-        // min, max, step, disable, ...
-    }
-) => {
-    //const [arr, setArr] = useState<[number, number]>(value ? value : [0, 100])
+export const AlternativeSuperDoubleRange: React.FC<AlternativeSuperDoubleRangePropsType> = ({
+                                                                                                onChangeRange,
+                                                                                                value,
+                                                                                                ...restProps
+                                                                                            }) => {
 
+    const [range, setRange] = useState<number[]>(value ? value : [0, 100]);
+
+    const handleChange = (event: Event, newRange: number | number[]) => {
+        setRange(newRange as number[]);
+        onChangeCallback(newRange as number[])
+    }
+
+    const onChangeCallback = (arr: number[]) => {
+        onChangeRange && onChangeRange(arr)
+    }
 
     return (
-        <>
-            <div className={s.container}>
-
-            </div>
-        </>
+        <Box sx={{width: 285, display: 'inline-block', margin: '0 10px 0 10px'}}>
+            <Slider
+                getAriaLabel={() => 'My range'}
+                value={value ? value : range}
+                onChange={handleChange}
+                valueLabelDisplay="auto"
+                sx={{color: 'success.main'}}
+                {...restProps}/>
+        </Box>
     )
 }

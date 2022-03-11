@@ -14,7 +14,7 @@ function HW11() {
         }
     }
 
-    const changeTwoValue = (value: [number, number]) => {
+    const changeTwoValue = (value: [number, number] | number[]) => {
         setValue1(value[0])
         setValue2(value[1])
     }

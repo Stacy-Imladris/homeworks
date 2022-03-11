@@ -12,7 +12,7 @@ const Message = (props: MessageDataPropsType) => {
         <div>
             <div className={mainClassName}>
                 <div className={avatarClassName}>
-                    <img src={props.avatar}/>
+                    <img src={props.avatar} alt={''}/>
                     <div className={s.angle}>
                         <div className={inClassName}></div>
                     </div>
