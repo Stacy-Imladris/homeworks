@@ -20,7 +20,7 @@ function HW12() {
     return (
         <div className={`${s.container} ${t[theme]}`}>
             <span className={t[theme + '-text']}>
-                homeworks 12
+                change theme
             </span>
             <SuperSelect
                 options={themes}
