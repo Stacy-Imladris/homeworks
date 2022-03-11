@@ -2,6 +2,10 @@ import React, {useState} from 'react'
 import {checkAC, homeWorkReducer, sortAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import s from './HW8.module.css'
+import t from '../h12/common/Themes.module.css'
+import {useSelector} from 'react-redux';
+import {AppStoreType} from '../h10/bll/store';
+import {ThemeType} from '../h12/bll/themeReducer';
 
 export type UserType = {
     _id: number
@@ -19,10 +23,12 @@ const initialPeople: Array<UserType> = [
 ]
 
 function HW8() {
+    const theme = useSelector<AppStoreType, ThemeType>(state => state.theme.theme)
+
     const [people, setPeople] = useState<Array<UserType>>(initialPeople)
 
     const finalPeople = people.map((p: UserType) => (
-        <div key={p._id} className={s.line}>
+        <div key={p._id} className={`${s.line} ${t[theme + '-text']}`}>
             <div className={s.name}>{p.name}</div>
             <div className={s.age}>{p.age}</div>
         </div>
@@ -42,7 +48,6 @@ function HW8() {
                 <SuperButton onClick={sortDown}>sort down</SuperButton>
                 <SuperButton onClick={check18}>check 18</SuperButton>
             </div>
-            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}
         </div>

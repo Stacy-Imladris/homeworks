@@ -1,5 +1,9 @@
 import React, {ChangeEvent, InputHTMLAttributes, DetailedHTMLProps} from 'react'
 import s from './SuperRadio.module.css'
+import t from '../../../h12/common/Themes.module.css'
+import {useSelector} from 'react-redux';
+import {AppStoreType} from '../../../h10/bll/store';
+import {ThemeType} from '../../../h12/bll/themeReducer';
 
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
@@ -16,14 +20,15 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         ...restProps
     }
 ) => {
+    const theme = useSelector<AppStoreType, ThemeType>(state => state.theme.theme)
+
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         onChange && onChange(e)
         onChangeOption && onChangeOption(e.currentTarget.value)
     }
 
-
     const mappedOptions: any[] = options ? options.map((o, i) => (
-        <label key={name + '-' + i} className={s.form_control}>
+        <label key={name + '-' + i} className={`${s.form_control} ${t[theme + '-text']}`}>
             <input
                 type={'radio'}
                 name={name}

@@ -3,8 +3,9 @@
 }
 
 .select select {
+    margin: 5px;
     display: block;
-    width: 100%;
+    max-width: 300px;
     padding: .35rem 2.5rem .35rem 1rem;
     background: linear-gradient(to right, #077517, #469d4b, #4CAF50, #469d4b, #077517);
     border: 1px solid white;

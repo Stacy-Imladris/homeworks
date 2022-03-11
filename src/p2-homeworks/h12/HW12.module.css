@@ -1,23 +1,7 @@
-.dark {
-    background: dimgrey;
-}
-
-.dark-text {
-    color: aliceblue;
-}
-
-.red {
-    background: lightcoral;
-}
-
-.red-text {
-    color: aqua;
-}
-
-.some {
-    background: lightgreen;
-}
-
-.some-text {
-    color: darkslateblue;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
 }

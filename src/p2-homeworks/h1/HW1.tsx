@@ -21,7 +21,7 @@ export type MessageDataPropsType = {
     name: string
     message: string
     time: string
-    messageLeft: boolean
+    messageLeft?: boolean
 }
 
 function HW1() {

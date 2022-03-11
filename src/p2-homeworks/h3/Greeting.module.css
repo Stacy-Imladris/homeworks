@@ -1,12 +1,12 @@
 div .error {
-    border: 3px solid #b71a1a;
+    border: 3px solid #e14848;
 }
 div .ok {
-    border: 3px solid #3ecb3e;
+    border: 3px solid green;
 }
 
 .forError {
-    color: red;
+    color: #e14848;
 }
 
 .forOk {

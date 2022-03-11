@@ -2,7 +2,11 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import s from "./Affairs.module.css"
+import t from '../h12/common/Themes.module.css'
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import {useSelector} from 'react-redux';
+import {AppStoreType} from '../h10/bll/store';
+import {ThemeType} from '../h12/bll/themeReducer';
 
 type AffairsPropsType = {
     data: Array<AffairType>
@@ -11,6 +15,8 @@ type AffairsPropsType = {
 }
 
 function Affairs(props: AffairsPropsType) {
+    const theme = useSelector<AppStoreType, ThemeType>(state => state.theme.theme)
+
     const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
@@ -35,7 +41,7 @@ function Affairs(props: AffairsPropsType) {
     return (
         <div className={s.container}>
             <div>
-                <div className={s.title}>My ToDoList:</div>
+                <div className={`${s.title} ${t[theme + '-text']}`}>My ToDoList:</div>
                 <SuperButton onClick={setAll} className={s.button}>All</SuperButton>
                 <SuperButton onClick={setHigh} className={s.button}>High</SuperButton>
                 <SuperButton onClick={setMiddle} className={s.button}>Middle</SuperButton>
